@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:extendedip/extendedip.dart';
 import 'package:test/test.dart';
 
