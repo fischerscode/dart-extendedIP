@@ -20,11 +20,17 @@ void main() {
       'fd00::': true,
       'fe00::': false,
     };
-    for (var entry in addresses.entries) {
-      expect(InternetAddress(entry.key).isInPrivate, entry.value,
-          reason: entry.key);
-      expect(InternetAddress(entry.key).toIPv6().isInPrivate, entry.value,
-          reason: '${entry.key} as IPv6');
+    for (final entry in addresses.entries) {
+      expect(
+        InternetAddress(entry.key).isInPrivate,
+        entry.value,
+        reason: entry.key,
+      );
+      expect(
+        InternetAddress(entry.key).toIPv6().isInPrivate,
+        entry.value,
+        reason: '${entry.key} as IPv6',
+      );
     }
   });
 }

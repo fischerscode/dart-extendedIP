@@ -40,7 +40,8 @@ extension ExtendedInternetAddress on InternetAddress {
         return InternetAddress('::FFFF:$address');
       default:
         throw Exception(
-            'Can not transfer $type to ${InternetAddressType.IPv6}!');
+          'Can not transfer $type to ${InternetAddressType.IPv6}!',
+        );
     }
   }
 }
